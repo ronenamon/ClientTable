@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 
 
 
-app.set('port' , (process.env.PORT || 8081))
+app.set('port' , (process.env.PORT || 8080))
 
 
 app.use(bodyParser.json())
@@ -22,7 +22,7 @@ app.use(express.static('static'))
 
 app.use(morgan('dev'))
 
-app.use(function (req,res,next){
+app.use(function (req,res){
     const err = new Error('Not Found')
     err.status = 404
     res.json(err)

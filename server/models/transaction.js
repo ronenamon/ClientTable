@@ -13,6 +13,6 @@ let userSchema = Schema({
 
 })
 
-const User = mongoose.model("User",userSchema)
+const User = mongoose.model("transactions",userSchema)
 
 module.exports  = User
